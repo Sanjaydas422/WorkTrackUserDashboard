@@ -1,0 +1,96 @@
+.dashboard-unfinished-card {
+  background-color: #e4d8e9;
+  border-radius: 18px;
+  padding: 20px;
+  width: 600px;
+  height: 530px;
+  box-sizing: border-box;
+}
+
+
+.dashboard-unfinished-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.dashboard-unfinished-header p {
+  font-size: 32px;
+  font-weight: 500;
+  font-family: inter;
+  font-style: medium;
+  margin: 0;
+}
+
+.dashboard-unfinished-arrow {
+  cursor: pointer;
+}
+
+
+.dashboard-unfinished-task {
+  background: #ffffffb5;
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 12px;
+  height: 180px;
+
+}
+
+.dashboard-unfinished-task:last-child {
+  margin-bottom: 0;
+}
+
+.dashboard-unfinished-title {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: inter;
+  margin-bottom: 4px;
+}
+
+.dashboard-unfinished-date {
+  font-size: 15px;
+  font-weight: 300;
+  font-family: inter;
+  font-style: light;
+  color: #00000073;
+  margin-bottom: 10px;
+}
+.hr{
+    border: none;            
+  height: 1px;               
+  padding-top: 30px; 
+}
+
+.dashboard-unfinished-footer {
+  margin-top: 45px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+}
+
+.dashboard-priority-pill {
+  font-size: 15px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-weight: 400;
+}
+
+.dashboard-priority-pill {
+  background-color: #97F3A8;
+  color: #065f46;
+}
+
+.dashboard-task-meta {
+  display: flex;
+  gap: 14px;
+  font-size: 15px;
+  color: #666;
+}
+
+.dashboard-task-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

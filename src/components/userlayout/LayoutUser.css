@@ -1,0 +1,18 @@
+.user-layout {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+
+.user-main {
+  margin-left: 317px; 
+  flex: 1;
+
+  padding: 0;
+
+}
+
+
+

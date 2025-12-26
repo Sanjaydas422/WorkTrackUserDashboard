@@ -1,0 +1,74 @@
+.statistics-card {
+  width: 400px;
+  background-color: #e4d8e9;
+  border-radius: 18px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-left: 46px;
+}
+
+.statistics-title {
+  font-size: 32px;
+  font-weight: 500;
+  font-family: inter;
+  font-style: medium;
+  margin-bottom: 16px;
+}
+
+.statistics-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* ===== Legend ===== */
+.statistics-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot.completed {
+  background-color: #a855f7;
+}
+
+.dot.progress {
+  background-color: #6366f1;
+}
+
+.dot.not-started {
+  background-color: #e9d5ff;
+}
+
+/* ===== Donut Chart ===== */
+.donut-chart {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donut-hole {
+  width: 80px;
+  height: 80px;
+  background-color: #f7ecff;
+  border-radius: 50%;
+}

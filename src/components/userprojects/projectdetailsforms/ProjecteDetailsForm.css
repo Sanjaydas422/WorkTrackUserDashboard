@@ -1,0 +1,221 @@
+.project-details-wrapper {
+  padding: 30px;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(to right, #f8edff, #f3dcff);
+  min-height: 100vh;
+}
+
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.project-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.project-header span {
+  color: #888;
+}
+
+.search-box input {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  width: 240px;
+}
+
+
+.project-card {
+  display: flex;
+  gap: 40px;
+  background: linear-gradient(to right, #f7eaff, #f1d8ff);
+  padding: 30px;
+  border-radius: 24px;
+  justify-content: space-between;
+}
+
+
+.project-left {
+  flex: 2;
+}
+
+.project-title-input {
+  width: 600px;
+  height: 60px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  font-size: 16px;
+
+}
+
+.pd-form-group {
+  margin-bottom: 20px;
+  width: 600px;
+  margin-top: 20px;
+}
+
+.pd-form-group label {
+  font-weight: 400;
+  font-size: 25px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.task-list {
+  padding-left: 18px;
+}
+
+.task-list li {
+  margin-bottom: 6px;
+   font-weight: 400;
+  font-size: 18px;
+}
+
+.pd-form-group textarea {
+  width: 600px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.assigned-users {
+  display: flex;
+  gap: 10px;
+  border: 1px solid #ccc;
+  width: 600px;
+  border-radius: 10px;
+  padding: 10px 15px; 
+}
+
+.user-pill {
+  background: #e6d6ff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.date-group {
+  display: flex;
+  gap: 20px;
+  padding-top: 20px;
+}
+.date-group label{
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.date-group input {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 88%;
+}
+
+
+.project-right {
+  flex: 1;
+ 
+}
+
+.status-box,
+.priority-box {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+    font-weight: 400;
+  font-size: 20px;
+  gap: 10px;
+}
+
+.status-box label,
+.priority-box label {
+  display: block;
+
+  font-weight: 500;
+}
+
+.status-pill {
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.in-progress {
+  border: 1px solid #ccc;
+
+}
+
+.priority-pill {
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 14px;
+}
+
+.low {
+  background: #d8f5e1;
+  color: #2e8b57;
+}
+
+
+.pd-comment-icons{
+    display: flex;
+    gap: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.pd-icons{
+    border: none;
+    background:none;
+    cursor: pointer;
+}
+.pd-attachments-icons{
+padding-top: 12px;
+}
+.pd-comment-box {
+  height: 100px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #e2d4fa;
+  resize: none;
+  font-size: 14px;
+}
+
+.pd-comment-btn {
+  width: 110px;
+  margin-top: 10px;
+  padding: 10px 0;
+  border-radius: 10px;
+  border: none;
+  background: #8b5cf6;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.pd-comment-btn:hover {
+  background: #7c3aed;
+}
+.pd-comment-group{
+      display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 40px;
+  margin-top: 70px;
+ 
+
+}
+.pd-comment-group label{
+       font-weight: 400;
+  font-size: 20px;
+}
