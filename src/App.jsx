@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       { path: "/taskdetails/:id", element: <UserTaskDetailsPage /> },
 
       { path: "project", element: <UserProjectPage /> },
-      { path: "projectdetails", element: <UserProjectDetailsPage /> },
+      { path: "/projectdetails/:id", element: <UserProjectDetailsPage /> },
 
       { path: "productivity", element: <UserProductivityPage /> },
       { path: "notification", element: <UserNotificationPage /> },
