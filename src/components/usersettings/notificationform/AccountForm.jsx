@@ -1,12 +1,29 @@
-import React from 'react'
-import "./AccountForm.css"
+import React, { useEffect, useState } from "react";
+import "./AccountForm.css";
 
 const AccountForm = () => {
-  return (
-    <div>
-        <div className="account-page">
+  const [user, setUser] = useState({
+    name: "",
+    mobile: "",
+    email: ""
+  });
 
+  useEffect(() => {
+    const savedUser = JSON.parse(localStorage.getItem("user"));
+
+    if (savedUser) {
+      setUser({
+        name: savedUser?.name || "",
+        mobile: savedUser?.mobile || "",
+        email: savedUser?.email || ""
+      });
+    }
+  }, []);
+
+  return (
+    <div className="account-page">
       <div className="account-card">
+
         {/* Profile Picture */}
         <div className="profile-section">
           <label className="form-label">Profile picture</label>
@@ -16,38 +33,46 @@ const AccountForm = () => {
           </div>
         </div>
 
-        {/* Name Fields */}
-        <div className="form-row">
-          <div className="form-group">
-            <label className="form-label">First name</label>
-            <input type="text" placeholder="First Name" />
-          </div>
-
-          <div className="form-group">
-            <label className="form-label">Last name</label>
-            <input type="text" placeholder="Last Name" />
-          </div>
+        {/* Name */}
+        <div className="form-group full-width">
+          <label className="form-label">Name</label>
+          <input
+            type="text"
+            value={user.name}
+            readOnly
+          />
         </div>
 
-        {/* Username */}
+        {/* Mobile */}
+        <div className="form-group full-width">
+          <label className="form-label">Mobile Number</label>
+          <input
+            type="text"
+            value={user.mobile}
+            readOnly
+          />
+        </div>
+
+        {/* Email as Username */}
         <div className="form-group full-width">
           <label className="form-label">Username</label>
-        <input type="text" placeholder="user@gmail.com" />
+          <input
+            type="text"
+            value={user.email}
+            readOnly
+          />
           <small className="helper-text">
             You can change your username once every 30 days
           </small>
         </div>
 
-        {/* Actions */}
         <div className="form-actions">
           <button className="btn-outline">Cancel</button>
           <button className="btn-primary">Save</button>
         </div>
       </div>
     </div>
-      
-    </div>
-  )
-}
+  );
+};
 
-export default AccountForm
+export default AccountForm;
