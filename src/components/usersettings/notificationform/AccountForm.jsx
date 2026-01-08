@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import api from "../../../api/api"; // Import your axios instance
 import "./AccountForm.css";
 
 const AccountForm = () => {
@@ -9,15 +10,18 @@ const AccountForm = () => {
   });
 
   useEffect(() => {
-    const savedUser = JSON.parse(localStorage.getItem("user"));
-
-    if (savedUser) {
-      setUser({
-        name: savedUser?.name || "",
-        mobile: savedUser?.mobile || "",
-        email: savedUser?.email || ""
+    // Fetch fresh data from the backend using the token in localStorage
+    api.get("/admin_app/current_user/") 
+      .then((res) => {
+        setUser({
+          name: res.data.name || "",
+          mobile: res.data.mobile || "",
+          email: res.data.email || ""
+        });
+      })
+      .catch((err) => {
+        console.error("Could not fetch user profile", err);
       });
-    }
   }, []);
 
   return (
