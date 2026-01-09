@@ -3,19 +3,19 @@ import "./TaskStatusCard.css";
 import { CiCalendar } from "react-icons/ci";
 import { useNavigate } from "react-router-dom";
 
-const TaskStatusCard = ({ tasks }) => {
+const TaskStatusCard = ({ tasks = [] }) => {
   const navigate = useNavigate();
 
   return (
     <div className="task-card-space">
-      {tasks.map((task, index) => {
-        const startDate = task.start_date || task.startDate || "—";
+      {tasks.map((task) => {
+        const startDate = task.start_date || "—";
         const endDate = task.due_date || "—";
 
         return (
           <div
             className="task-card"
-            key={task.id || index}
+            key={task.id}
             onClick={() => navigate(`/taskdetails/${task.id}`)}
           >
             <div className="task-card-header">
