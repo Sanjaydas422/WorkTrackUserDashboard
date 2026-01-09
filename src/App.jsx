@@ -1,5 +1,5 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 
 import UserErrorPage from "./pages/UserErrorPage";
 import UserDashboardPage from "./pages/UserDashboardPage";
@@ -10,29 +10,44 @@ import UserProjectDetailsPage from "./pages/UserProjectDetailsPage";
 import UserProductivityPage from "./pages/UserProductivityPage";
 import UserNotificationPage from "./pages/UserNotificationPage";
 import UserSettingsPage from "./pages/UserSettingsPage";
+
 import LayoutUser from "./components/userlayout/LayoutUser";
+import UserAuthGuard from "./auth/UserAuthGuard";
+import Login from "./components/login/Login";
 
 const router = createBrowserRouter([
   {
+    path: "/login",
+    element: <Login />,
+  },
+
+  {
     path: "/",
+    element: (
+      <UserAuthGuard>
+        <LayoutUser />
+      </UserAuthGuard>
+    ),
     errorElement: <UserErrorPage />,
-    element:<LayoutUser/>,
     children: [
       { index: true, element: <UserDashboardPage /> },
       { path: "dashboard", element: <UserDashboardPage /> },
 
       { path: "task", element: <UserTasksPage /> },
-      { path: "/taskdetails/:id", element: <UserTaskDetailsPage /> },
+      { path: "taskdetails/:id", element: <UserTaskDetailsPage /> },
 
       { path: "project", element: <UserProjectPage /> },
-      { path: "/projectdetails/:id", element: <UserProjectDetailsPage /> },
+      { path: "projectdetails/:id", element: <UserProjectDetailsPage /> },
 
       { path: "productivity", element: <UserProductivityPage /> },
       { path: "notification", element: <UserNotificationPage /> },
       { path: "settings", element: <UserSettingsPage /> },
-
-  
     ],
+  },
+
+  {
+    path: "*",
+    element: <Navigate to="/login" replace />,
   },
 ]);
 
